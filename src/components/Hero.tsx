@@ -55,7 +55,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          PipBot is an easy to use but extremely powerful desktop AI that floats alongside you — managing emails, calendars, research, and tasks. Share your screen for extra context, or don't. No browser tabs. No context switching. Just ask.
+          PipBot is a desktop assistant that feels less like software and more like presence. It manages email, calendars, research, and tasks while staying aware of what you're doing. Screen sharing is optional. No tabs. No switching. Just ask.
         </motion.p>
         
         {/* Waitlist Form */}
