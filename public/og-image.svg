@@ -1,8 +1,8 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="50%" y1="0%" x2="50%" y2="100%">
       <stop offset="0%" stop-color="#0a0a0a" />
-      <stop offset="100%" stop-color="#171717" />
+      <stop offset="100%" stop-color="#0f1f1a" />
     </linearGradient>
     <linearGradient id="pipBody" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" />
@@ -14,7 +14,7 @@
   <rect width="1200" height="630" fill="url(#bg)" />
 
   <!-- Grid pattern -->
-  <g opacity="0.1">
+  <g opacity="0.08">
     <line x1="0" y1="0" x2="0" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="100" y1="0" x2="100" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="200" y1="0" x2="200" y2="630" stroke="#10b981" stroke-width="1" />
@@ -33,50 +33,68 @@
     <line x1="0" y1="300" x2="1200" y2="300" stroke="#10b981" stroke-width="1" />
     <line x1="0" y1="400" x2="1200" y2="400" stroke="#10b981" stroke-width="1" />
     <line x1="0" y1="500" x2="1200" y2="500" stroke="#10b981" stroke-width="1" />
-    <line x1="0" y1="630" x2="1200" y2="630" stroke="#10b981" stroke-width="1" />
   </g>
 
-  <!-- Pip character (centered left area) -->
-  <g transform="translate(250, 200)">
+  <!-- Pip character (centered) -->
+  <g transform="translate(530, 50)">
     <path
-      d="M100 20
-         C140 20, 170 50, 170 90
-         C170 110, 180 120, 176 140
-         C170 170, 140 184, 100 184
-         C60 184, 30 170, 24 140
-         C20 120, 30 110, 30 90
-         C30 50, 60 20, 100 20Z"
+      d="M70 14
+         C98 14, 119 35, 119 63
+         C119 77, 126 84, 123 98
+         C119 119, 98 129, 70 129
+         C42 129, 21 119, 17 98
+         C14 84, 21 77, 21 63
+         C21 35, 42 14, 70 14Z"
       fill="url(#pipBody)"
     />
     <!-- Eyes -->
-    <ellipse cx="70" cy="90" rx="12" ry="16" fill="#0a0a0a" />
-    <ellipse cx="130" cy="90" rx="12" ry="16" fill="#0a0a0a" />
+    <ellipse cx="49" cy="63" rx="8.4" ry="11.2" fill="#0a0a0a" />
+    <ellipse cx="91" cy="63" rx="8.4" ry="11.2" fill="#0a0a0a" />
     <!-- Eye highlights -->
-    <circle cx="74" cy="84" r="5" fill="white" opacity="0.8" />
-    <circle cx="134" cy="84" r="5" fill="white" opacity="0.8" />
+    <circle cx="52" cy="59" r="3.5" fill="white" opacity="0.8" />
+    <circle cx="94" cy="59" r="3.5" fill="white" opacity="0.8" />
     <!-- Smile -->
     <path
-      d="M76 130 Q100 150, 124 130"
+      d="M53 91 Q70 105, 87 91"
       stroke="#0a0a0a"
-      stroke-width="6"
+      stroke-width="4.2"
       stroke-linecap="round"
       fill="none"
     />
     <!-- Cheeks -->
-    <circle cx="50" cy="116" r="10" fill="#10b981" opacity="0.3" />
-    <circle cx="150" cy="116" r="10" fill="#10b981" opacity="0.3" />
+    <circle cx="35" cy="81" r="7" fill="#10b981" opacity="0.3" />
+    <circle cx="105" cy="81" r="7" fill="#10b981" opacity="0.3" />
   </g>
 
-  <!-- Text -->
-  <text x="550" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white">
-    Meet <tspan fill="#10b981">Pip</tspan>
+  <!-- Coming soon badge -->
+  <g transform="translate(600, 210)">
+    <rect x="-120" y="-18" width="240" height="36" rx="18" fill="#1a1a1a" stroke="#262626" stroke-width="1" />
+    <circle cx="-90" cy="0" r="5" fill="#10b981" />
+    <text x="0" y="6" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#a3a3a3" text-anchor="middle">
+      Coming soon to Mac
+    </text>
+  </g>
+
+  <!-- Meet Pip title -->
+  <text x="600" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="700" text-anchor="middle">
+    <tspan fill="white">Meet </tspan><tspan fill="#10b981">Pip</tspan>
   </text>
-  <text x="550" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a3a3a3">
+
+  <!-- Subtitle -->
+  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a3a3a3" text-anchor="middle">
     Your AI companion that lives on your desktop
   </text>
 
-  <!-- URL -->
-  <text x="550" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#10b981">
+  <!-- Description -->
+  <text x="600" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
+    A floating assistant that manages email, calendars, research, and tasks.
+  </text>
+  <text x="600" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
+    No tabs. No switching. Just ask.
+  </text>
+
+  <!-- pipbot.co -->
+  <text x="600" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#10b981" text-anchor="middle">
     pipbot.co
   </text>
 </svg>
