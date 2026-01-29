@@ -18,7 +18,7 @@ const steps = [
   {
     number: '03',
     icon: Zap,
-    title: 'Watch it work',
+    title: 'Watch it deliver',
     description: 'Pip handles tasks while you focus on what matters',
   },
 ]
