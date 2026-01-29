@@ -1,27 +1,25 @@
-import { NextRequest, NextResponse } from 'next/server'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function POST(request: NextRequest) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
   try {
-    const { email } = await request.json()
+    const { email } = req.body
 
     // Validate email
     if (!email || !email.includes('@')) {
-      return NextResponse.json(
-        { error: 'Valid email required' },
-        { status: 400 }
-      )
+      return res.status(400).json({ error: 'Valid email required' })
     }
 
     // Check if Resend API key is configured
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not configured')
-      return NextResponse.json(
-        { error: 'Email service not configured' },
-        { status: 500 }
-      )
+      return res.status(500).json({ error: 'Email service not configured' })
     }
 
     // Send welcome email to user
@@ -52,26 +50,26 @@ export async function POST(request: NextRequest) {
                         </div>
                       </td>
                     </tr>
-                    
+
                     <!-- Content -->
                     <tr>
                       <td style="background-color: #171717; border: 1px solid #262626; border-radius: 16px; padding: 40px 32px;">
                         <h1 style="color: #10b981; font-size: 28px; font-weight: 700; margin: 0 0 24px; text-align: center;">
                           Welcome to the waitlist!
                         </h1>
-                        
+
                         <p style="color: #a3a3a3; line-height: 1.7; margin: 0 0 16px; font-size: 16px;">
                           Hey there! Thanks for signing up for early access to PipBot.
                         </p>
-                        
+
                         <p style="color: #a3a3a3; line-height: 1.7; margin: 0 0 16px; font-size: 16px;">
                           We're building something special—an AI companion that actually lives on your desktop and helps you get things done without the constant tab-switching.
                         </p>
-                        
+
                         <p style="color: #a3a3a3; line-height: 1.7; margin: 0 0 24px; font-size: 16px;">
                           We'll reach out as soon as Pip is ready for you.
                         </p>
-                        
+
                         <div style="border-top: 1px solid #262626; padding-top: 24px; margin-top: 24px;">
                           <p style="color: #737373; font-size: 14px; margin: 0;">
                             — The Pip Team
@@ -79,7 +77,7 @@ export async function POST(request: NextRequest) {
                         </div>
                       </td>
                     </tr>
-                    
+
                     <!-- Footer -->
                     <tr>
                       <td align="center" style="padding-top: 32px;">
@@ -111,12 +109,9 @@ export async function POST(request: NextRequest) {
       `,
     })
 
-    return NextResponse.json({ success: true }, { status: 200 })
+    return res.status(200).json({ success: true })
   } catch (error) {
     console.error('Waitlist signup error:', error)
-    return NextResponse.json(
-      { error: 'Failed to process signup' },
-      { status: 500 }
-    )
+    return res.status(500).json({ error: 'Failed to process signup' })
   }
 }
