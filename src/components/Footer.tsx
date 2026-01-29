@@ -14,10 +14,7 @@ export function Footer() {
 
         {/* Links */}
         <div className="flex items-center gap-6 text-sm">
-          <span className="text-muted-foreground">
-            © 2025 Bloom Street LLC
-          </span>
-          <a 
+          <a
             href="#" 
             className="text-muted-foreground hover:text-foreground transition-colors"
           >

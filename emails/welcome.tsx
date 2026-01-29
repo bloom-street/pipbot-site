@@ -51,9 +51,6 @@ export function WelcomeEmail({ name }: WelcomeEmailProps) {
 
           <Section style={footer}>
             <Text style={footerText}>
-              © 2026 Bloom Street. All rights reserved.
-            </Text>
-            <Text style={footerText}>
               You received this email because you signed up for the PipBot waitlist.
             </Text>
           </Section>

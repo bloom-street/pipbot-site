@@ -82,9 +82,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                     <tr>
                       <td align="center" style="padding-top: 32px;">
                         <p style="color: #525252; font-size: 13px; margin: 4px 0;">
-                          © 2025 Bloom Street. All rights reserved.
-                        </p>
-                        <p style="color: #525252; font-size: 13px; margin: 4px 0;">
                           <a href="https://pipbot.co" style="color: #10b981; text-decoration: none;">pipbot.co</a>
                         </p>
                       </td>
