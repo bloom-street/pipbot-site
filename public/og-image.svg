@@ -1,0 +1,82 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#171717" />
+    </linearGradient>
+    <linearGradient id="pipBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Grid pattern -->
+  <g opacity="0.1">
+    <line x1="0" y1="0" x2="0" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="100" y1="0" x2="100" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="200" y1="0" x2="200" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="400" y1="0" x2="400" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="500" y1="0" x2="500" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="700" y1="0" x2="700" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="800" y1="0" x2="800" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="1100" y1="0" x2="1100" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="1200" y1="0" x2="1200" y2="630" stroke="#10b981" stroke-width="1" />
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#10b981" stroke-width="1" />
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#10b981" stroke-width="1" />
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#10b981" stroke-width="1" />
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#10b981" stroke-width="1" />
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#10b981" stroke-width="1" />
+    <line x1="0" y1="630" x2="1200" y2="630" stroke="#10b981" stroke-width="1" />
+  </g>
+
+  <!-- Pip character (centered left area) -->
+  <g transform="translate(250, 200)">
+    <path
+      d="M100 20
+         C140 20, 170 50, 170 90
+         C170 110, 180 120, 176 140
+         C170 170, 140 184, 100 184
+         C60 184, 30 170, 24 140
+         C20 120, 30 110, 30 90
+         C30 50, 60 20, 100 20Z"
+      fill="url(#pipBody)"
+    />
+    <!-- Eyes -->
+    <ellipse cx="70" cy="90" rx="12" ry="16" fill="#0a0a0a" />
+    <ellipse cx="130" cy="90" rx="12" ry="16" fill="#0a0a0a" />
+    <!-- Eye highlights -->
+    <circle cx="74" cy="84" r="5" fill="white" opacity="0.8" />
+    <circle cx="134" cy="84" r="5" fill="white" opacity="0.8" />
+    <!-- Smile -->
+    <path
+      d="M76 130 Q100 150, 124 130"
+      stroke="#0a0a0a"
+      stroke-width="6"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <!-- Cheeks -->
+    <circle cx="50" cy="116" r="10" fill="#10b981" opacity="0.3" />
+    <circle cx="150" cy="116" r="10" fill="#10b981" opacity="0.3" />
+  </g>
+
+  <!-- Text -->
+  <text x="550" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white">
+    Meet <tspan fill="#10b981">Pip</tspan>
+  </text>
+  <text x="550" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a3a3a3">
+    Your AI companion that lives on your desktop
+  </text>
+
+  <!-- URL -->
+  <text x="550" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#10b981">
+    pipbot.co
+  </text>
+</svg>
