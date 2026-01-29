@@ -14,8 +14,7 @@
   <rect width="1200" height="630" fill="url(#bg)" />
 
   <!-- Grid pattern -->
-  <g opacity="0.08">
-    <line x1="0" y1="0" x2="0" y2="630" stroke="#10b981" stroke-width="1" />
+  <g opacity="0.06">
     <line x1="100" y1="0" x2="100" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="200" y1="0" x2="200" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="300" y1="0" x2="300" y2="630" stroke="#10b981" stroke-width="1" />
@@ -27,7 +26,6 @@
     <line x1="900" y1="0" x2="900" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="1000" y1="0" x2="1000" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="1100" y1="0" x2="1100" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="1200" y1="0" x2="1200" y2="630" stroke="#10b981" stroke-width="1" />
     <line x1="0" y1="100" x2="1200" y2="100" stroke="#10b981" stroke-width="1" />
     <line x1="0" y1="200" x2="1200" y2="200" stroke="#10b981" stroke-width="1" />
     <line x1="0" y1="300" x2="1200" y2="300" stroke="#10b981" stroke-width="1" />
@@ -35,66 +33,57 @@
     <line x1="0" y1="500" x2="1200" y2="500" stroke="#10b981" stroke-width="1" />
   </g>
 
-  <!-- Pip character (centered) -->
-  <g transform="translate(530, 50)">
+  <!-- Pip character (centered, smaller) -->
+  <g transform="translate(550, 80)">
     <path
-      d="M70 14
-         C98 14, 119 35, 119 63
-         C119 77, 126 84, 123 98
-         C119 119, 98 129, 70 129
-         C42 129, 21 119, 17 98
-         C14 84, 21 77, 21 63
-         C21 35, 42 14, 70 14Z"
+      d="M50 10
+         C70 10, 85 25, 85 45
+         C85 55, 90 60, 88 70
+         C85 85, 70 92, 50 92
+         C30 92, 15 85, 12 70
+         C10 60, 15 55, 15 45
+         C15 25, 30 10, 50 10Z"
       fill="url(#pipBody)"
     />
     <!-- Eyes -->
-    <ellipse cx="49" cy="63" rx="8.4" ry="11.2" fill="#0a0a0a" />
-    <ellipse cx="91" cy="63" rx="8.4" ry="11.2" fill="#0a0a0a" />
+    <ellipse cx="35" cy="45" rx="6" ry="8" fill="#0a0a0a" />
+    <ellipse cx="65" cy="45" rx="6" ry="8" fill="#0a0a0a" />
     <!-- Eye highlights -->
-    <circle cx="52" cy="59" r="3.5" fill="white" opacity="0.8" />
-    <circle cx="94" cy="59" r="3.5" fill="white" opacity="0.8" />
+    <circle cx="37" cy="42" r="2.5" fill="white" opacity="0.8" />
+    <circle cx="67" cy="42" r="2.5" fill="white" opacity="0.8" />
     <!-- Smile -->
     <path
-      d="M53 91 Q70 105, 87 91"
+      d="M38 65 Q50 75, 62 65"
       stroke="#0a0a0a"
-      stroke-width="4.2"
+      stroke-width="3"
       stroke-linecap="round"
       fill="none"
     />
     <!-- Cheeks -->
-    <circle cx="35" cy="81" r="7" fill="#10b981" opacity="0.3" />
-    <circle cx="105" cy="81" r="7" fill="#10b981" opacity="0.3" />
-  </g>
-
-  <!-- Coming soon badge -->
-  <g transform="translate(600, 210)">
-    <rect x="-120" y="-18" width="240" height="36" rx="18" fill="#1a1a1a" stroke="#262626" stroke-width="1" />
-    <circle cx="-90" cy="0" r="5" fill="#10b981" />
-    <text x="0" y="6" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#a3a3a3" text-anchor="middle">
-      Coming soon to Mac
-    </text>
+    <circle cx="25" cy="58" r="5" fill="#10b981" opacity="0.3" />
+    <circle cx="75" cy="58" r="5" fill="#10b981" opacity="0.3" />
   </g>
 
   <!-- Meet Pip title -->
-  <text x="600" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="80" font-weight="700" text-anchor="middle">
+  <text x="600" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" text-anchor="middle">
     <tspan fill="white">Meet </tspan><tspan fill="#10b981">Pip</tspan>
   </text>
 
   <!-- Subtitle -->
-  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a3a3a3" text-anchor="middle">
+  <text x="600" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a3a3a3" text-anchor="middle">
     Your AI companion that lives on your desktop
   </text>
 
   <!-- Description -->
-  <text x="600" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
-    A floating assistant that manages email, calendars, research, and tasks.
+  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
+    A floating assistant that manages email, calendars,
   </text>
-  <text x="600" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
-    No tabs. No switching. Just ask.
+  <text x="600" y="405" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
+    research, and tasks. No tabs. No switching. Just ask.
   </text>
 
   <!-- pipbot.co -->
-  <text x="600" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#10b981" text-anchor="middle">
+  <text x="600" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#10b981" text-anchor="middle">
     pipbot.co
   </text>
 </svg>
