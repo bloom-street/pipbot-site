@@ -3,31 +3,17 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-// Email validation regex
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const { name, email } = body
+    const { email } = await request.json()
 
     // Validate email
-    if (!email || typeof email !== 'string') {
+    if (!email || !email.includes('@')) {
       return NextResponse.json(
-        { error: 'Email is required' },
+        { error: 'Valid email required' },
         { status: 400 }
       )
     }
-
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
-      )
-    }
-
-    // Validate name (optional, but should be string if provided)
-    const sanitizedName = name && typeof name === 'string' ? name.trim() : undefined
 
     // Check if Resend API key is configured
     if (!process.env.RESEND_API_KEY) {
@@ -39,10 +25,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Send welcome email to user
-    const welcomeResult = await resend.emails.send({
+    await resend.emails.send({
       from: 'Pip <pip@send.pipbot.co>',
       to: email,
-      subject: "You're on the PipBot waitlist! 🎉",
+      subject: "You're on the list! 🎉",
       html: `
         <!DOCTYPE html>
         <html>
@@ -51,38 +37,58 @@ export async function POST(request: NextRequest) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Welcome to PipBot</title>
           </head>
-          <body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          <body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: system-ui, -apple-system, sans-serif;">
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td align="center" style="padding: 40px 20px;">
-                  <table width="480" cellpadding="0" cellspacing="0" border="0" style="max-width: 480px; width: 100%;">
-                    <!-- Header -->
+                  <table width="500" cellpadding="0" cellspacing="0" border="0" style="max-width: 500px; width: 100%;">
+                    <!-- Logo -->
                     <tr>
-                      <td align="center" style="padding: 20px 0;">
-                        <p style="color: #10b981; font-size: 24px; font-weight: 700; margin: 0;">PipBot</p>
+                      <td align="center" style="padding-bottom: 32px;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #34d399, #059669); border-radius: 50%; display: inline-block; position: relative;">
+                          <div style="position: absolute; top: 35%; left: 30%; width: 12px; height: 16px; background: #0a0a0a; border-radius: 50%;"></div>
+                          <div style="position: absolute; top: 35%; right: 30%; width: 12px; height: 16px; background: #0a0a0a; border-radius: 50%;"></div>
+                          <div style="position: absolute; bottom: 30%; left: 35%; width: 30%; height: 3px; background: #0a0a0a; border-radius: 2px;"></div>
+                        </div>
                       </td>
                     </tr>
                     
                     <!-- Content -->
                     <tr>
-                      <td style="background-color: #171717; border: 1px solid #262626; border-radius: 12px; padding: 40px 32px;">
-                        <h1 style="color: #f5f5f5; font-size: 24px; font-weight: 600; line-height: 1.3; margin: 0 0 24px;">Hey ${sanitizedName || 'there'}! 👋</h1>
+                      <td style="background-color: #171717; border: 1px solid #262626; border-radius: 16px; padding: 40px 32px;">
+                        <h1 style="color: #10b981; font-size: 28px; font-weight: 700; margin: 0 0 24px; text-align: center;">
+                          Welcome to the waitlist!
+                        </h1>
                         
-                        <p style="color: #a3a3a3; font-size: 16px; line-height: 1.6; margin: 0 0 16px;">Thanks for signing up for early access to PipBot.</p>
+                        <p style="color: #a3a3a3; line-height: 1.7; margin: 0 0 16px; font-size: 16px;">
+                          Hey there! Thanks for signing up for early access to PipBot.
+                        </p>
                         
-                        <p style="color: #a3a3a3; font-size: 16px; line-height: 1.6; margin: 0 0 16px;">We're building an AI companion that lives on your desktop — always there when you need help, out of the way when you don't.</p>
+                        <p style="color: #a3a3a3; line-height: 1.7; margin: 0 0 16px; font-size: 16px;">
+                          We're building something special—an AI companion that actually lives on your desktop and helps you get things done without the constant tab-switching.
+                        </p>
                         
-                        <p style="color: #a3a3a3; font-size: 16px; line-height: 1.6; margin: 0 0 16px;">We'll email you as soon as PipBot is ready for Mac.</p>
+                        <p style="color: #a3a3a3; line-height: 1.7; margin: 0 0 24px; font-size: 16px;">
+                          We'll reach out as soon as Pip is ready for you.
+                        </p>
                         
-                        <p style="color: #f5f5f5; font-size: 16px; font-weight: 500; margin: 32px 0 0;">— The Pip Team</p>
+                        <div style="border-top: 1px solid #262626; padding-top: 24px; margin-top: 24px;">
+                          <p style="color: #737373; font-size: 14px; margin: 0;">
+                            — The Pip Team
+                          </p>
+                        </div>
                       </td>
                     </tr>
                     
                     <!-- Footer -->
                     <tr>
-                      <td align="center" style="padding: 32px 0 0;">
-                        <p style="color: #737373; font-size: 14px; margin: 4px 0;">© 2026 Bloom Street. All rights reserved.</p>
-                        <p style="color: #737373; font-size: 14px; margin: 4px 0;">pipbot.co</p>
+                      <td align="center" style="padding-top: 32px;">
+                        <p style="color: #525252; font-size: 13px; margin: 4px 0;">
+                          © 2025 Bloom Street. All rights reserved.
+                        </p>
+                        <p style="color: #525252; font-size: 13px; margin: 4px 0;">
+                          <a href="https://pipbot.co" style="color: #10b981; text-decoration: none;">pipbot.co</a>
+                        </p>
                       </td>
                     </tr>
                   </table>
@@ -94,41 +100,22 @@ export async function POST(request: NextRequest) {
       `,
     })
 
-    if (welcomeResult.error) {
-      console.error('Error sending welcome email:', welcomeResult.error)
-      return NextResponse.json(
-        { error: 'Failed to send welcome email' },
-        { status: 500 }
-      )
-    }
-
-    // Send notification email to admin
-    const notificationResult = await resend.emails.send({
-      from: 'Pip <pip@send.pipbot.co>',
+    // Notify admin about new signup
+    await resend.emails.send({
+      from: 'PipBot Waitlist <pip@send.pipbot.co>',
       to: 'pipbotwaitlist@bloomstreet.io',
-      subject: 'New PipBot Waitlist Signup',
-      text: `New signup on the PipBot waitlist!
-
-Name: ${sanitizedName || 'Not provided'}
-Email: ${email}
-Signed up at: ${new Date().toISOString()}
-
-— PipBot Notification System`,
+      subject: `New waitlist signup: ${email}`,
+      html: `
+        <p>New signup: <strong>${email}</strong></p>
+        <p>Time: ${new Date().toISOString()}</p>
+      `,
     })
 
-    if (notificationResult.error) {
-      console.error('Error sending notification email:', notificationResult.error)
-      // Don't fail the request if notification fails, but log it
-    }
-
-    return NextResponse.json(
-      { message: 'Successfully signed up for waitlist' },
-      { status: 200 }
-    )
+    return NextResponse.json({ success: true }, { status: 200 })
   } catch (error) {
     console.error('Waitlist signup error:', error)
     return NextResponse.json(
-      { error: 'Something went wrong. Please try again.' },
+      { error: 'Failed to process signup' },
       { status: 500 }
     )
   }
