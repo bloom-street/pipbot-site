@@ -18,50 +18,52 @@ export function PipAvatar({ size = 'lg' }: { size?: 'sm' | 'md' | 'lg' }) {
         {/* Outer glow */}
         <defs>
           <radialGradient id="pipGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.4" />
+            <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
             <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
           </radialGradient>
-          <linearGradient id="pipBody" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#34d399" />
-            <stop offset="100%" stopColor="#059669" />
-          </linearGradient>
         </defs>
-        
+
         {/* Glow circle */}
         <circle cx="50" cy="50" r="48" fill="url(#pipGlow)" />
-        
-        {/* Main blob body */}
+
+        {/* Speech bubble body */}
         <path
-          d="M50 10 
-             C70 10, 85 25, 85 45
-             C85 55, 90 60, 88 70
-             C85 85, 70 92, 50 92
-             C30 92, 15 85, 12 70
-             C10 60, 15 55, 15 45
-             C15 25, 30 10, 50 10Z"
-          fill="url(#pipBody)"
+          d="M50 12
+             C72 12, 88 26, 88 44
+             C88 62, 72 76, 50 76
+             C44 76, 38 75, 33 73
+             L20 82
+             L24 70
+             C16 64, 12 55, 12 44
+             C12 26, 28 12, 50 12Z"
+          fill="white"
         />
-        
-        {/* Eyes */}
-        <ellipse cx="35" cy="45" rx="6" ry="8" fill="#0a0a0a" />
-        <ellipse cx="65" cy="45" rx="6" ry="8" fill="#0a0a0a" />
-        
-        {/* Eye highlights */}
-        <circle cx="37" cy="42" r="2.5" fill="white" opacity="0.8" />
-        <circle cx="67" cy="42" r="2.5" fill="white" opacity="0.8" />
-        
-        {/* Smile */}
-        <path
-          d="M38 65 Q50 75, 62 65"
-          stroke="#0a0a0a"
-          strokeWidth="3"
-          strokeLinecap="round"
-          fill="none"
+
+        {/* Three dots */}
+        <motion.circle
+          cx="32"
+          cy="44"
+          r="5"
+          fill="#6366f1"
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
         />
-        
-        {/* Cheeks */}
-        <circle cx="25" cy="58" r="5" fill="#10b981" opacity="0.3" />
-        <circle cx="75" cy="58" r="5" fill="#10b981" opacity="0.3" />
+        <motion.circle
+          cx="50"
+          cy="44"
+          r="5"
+          fill="#6366f1"
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
+        />
+        <motion.circle
+          cx="68"
+          cy="44"
+          r="5"
+          fill="#6366f1"
+          animate={{ opacity: [0.4, 1, 0.4] }}
+          transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}
+        />
       </svg>
     </motion.div>
   )
