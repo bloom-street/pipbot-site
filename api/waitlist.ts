@@ -22,9 +22,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(500).json({ error: 'Email service not configured' })
     }
 
+    // Add contact to Resend Audience for future marketing
+    if (process.env.RESEND_AUDIENCE_ID) {
+      try {
+        await resend.contacts.create({
+          audienceId: process.env.RESEND_AUDIENCE_ID,
+          email,
+          unsubscribed: false,
+        })
+      } catch (contactError) {
+        // Log but don't fail - contact may already exist
+        console.log('Contact creation note:', contactError)
+      }
+    }
+
     // Send welcome email to user
     await resend.emails.send({
-      from: 'Pip <pip@send.pipbot.co>',
+      from: 'PipBot <pip@send.pipbot.co>',
       to: email,
       subject: "You're on the list! 🎉",
       html: `
