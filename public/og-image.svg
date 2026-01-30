@@ -14,10 +14,10 @@
   <rect width="1200" height="630" fill="url(#bg)" />
 
   <!-- Subtle glow behind icon -->
-  <ellipse cx="600" cy="200" rx="200" ry="150" fill="url(#blueGlow)" />
+  <ellipse cx="600" cy="180" rx="180" ry="140" fill="url(#blueGlow)" />
 
   <!-- Large speech bubble icon (centered, prominent) -->
-  <g transform="translate(510, 80) scale(1.8)">
+  <g transform="translate(515, 70) scale(1.7)">
     <path
       d="M50 8
          C75 8, 92 24, 92 44
@@ -34,24 +34,24 @@
     <circle cx="70" cy="44" r="7" fill="#007AFF" />
   </g>
 
-  <!-- Main headline -->
-  <text x="600" y="340" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="white">
-    Your AI Desktop Companion
+  <!-- Main headline - shorter -->
+  <text x="600" y="320" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="56" font-weight="700" text-anchor="middle" fill="white">
+    Meet Pip
   </text>
 
   <!-- Subheadline -->
-  <text x="600" y="400" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" text-anchor="middle" fill="#a3a3a3">
-    Email, calendar, research, and tasks — just ask.
+  <text x="600" y="380" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" text-anchor="middle" fill="#a3a3a3">
+    Your AI companion that lives on your desktop
   </text>
 
   <!-- CTA Badge -->
-  <rect x="460" y="460" width="280" height="56" rx="28" fill="#007AFF" />
-  <text x="600" y="497" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="white">
+  <rect x="460" y="430" width="280" height="56" rx="28" fill="#007AFF" />
+  <text x="600" y="467" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="white">
     Join the Waitlist
   </text>
 
   <!-- Bottom branding -->
-  <text x="600" y="580" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" text-anchor="middle" fill="#525252">
-    pipbot.co
+  <text x="600" y="575" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#666666" letter-spacing="1">
+    PIPBOT.CO
   </text>
 </svg>
