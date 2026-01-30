@@ -1,37 +1,23 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="50%" y1="0%" x2="50%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0a0a0a" />
-      <stop offset="100%" stop-color="#0a1628" />
+      <stop offset="100%" stop-color="#0a1a2e" />
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#007AFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#007AFF" stop-opacity="0" />
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)" />
 
-  <!-- Grid pattern -->
-  <g opacity="0.06">
-    <line x1="100" y1="0" x2="100" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="200" y1="0" x2="200" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="300" y1="0" x2="300" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="400" y1="0" x2="400" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="500" y1="0" x2="500" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="600" y1="0" x2="600" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="700" y1="0" x2="700" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="800" y1="0" x2="800" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="900" y1="0" x2="900" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="1100" y1="0" x2="1100" y2="630" stroke="#007AFF" stroke-width="1" />
-    <line x1="0" y1="100" x2="1200" y2="100" stroke="#007AFF" stroke-width="1" />
-    <line x1="0" y1="200" x2="1200" y2="200" stroke="#007AFF" stroke-width="1" />
-    <line x1="0" y1="300" x2="1200" y2="300" stroke="#007AFF" stroke-width="1" />
-    <line x1="0" y1="400" x2="1200" y2="400" stroke="#007AFF" stroke-width="1" />
-    <line x1="0" y1="500" x2="1200" y2="500" stroke="#007AFF" stroke-width="1" />
-  </g>
+  <!-- Subtle glow behind icon -->
+  <ellipse cx="600" cy="200" rx="200" ry="150" fill="url(#blueGlow)" />
 
-  <!-- Speech bubble character (centered) -->
-  <g transform="translate(550, 70)">
-    <!-- Speech bubble body -->
+  <!-- Large speech bubble icon (centered, prominent) -->
+  <g transform="translate(510, 80) scale(1.8)">
     <path
       d="M50 8
          C75 8, 92 24, 92 44
@@ -43,32 +29,29 @@
          C8 24, 25 8, 50 8Z"
       fill="white"
     />
-    <!-- Three dots -->
     <circle cx="30" cy="44" r="7" fill="#007AFF" />
     <circle cx="50" cy="44" r="7" fill="#007AFF" />
     <circle cx="70" cy="44" r="7" fill="#007AFF" />
   </g>
 
-  <!-- Meet Pip title -->
-  <text x="600" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" text-anchor="middle">
-    <tspan fill="white">Meet </tspan><tspan fill="#007AFF">Pip</tspan>
+  <!-- Main headline -->
+  <text x="600" y="340" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="white">
+    Your AI Desktop Companion
   </text>
 
-  <!-- Subtitle -->
-  <text x="600" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#a3a3a3" text-anchor="middle">
-    Your AI companion that lives on your desktop
+  <!-- Subheadline -->
+  <text x="600" y="400" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" text-anchor="middle" fill="#a3a3a3">
+    Email, calendar, research, and tasks — just ask.
   </text>
 
-  <!-- Description -->
-  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
-    A floating assistant that manages email, calendars,
-  </text>
-  <text x="600" y="405" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#737373" text-anchor="middle">
-    research, and tasks. No tabs. No switching. Just ask.
+  <!-- CTA Badge -->
+  <rect x="460" y="460" width="280" height="56" rx="28" fill="#007AFF" />
+  <text x="600" y="497" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="600" text-anchor="middle" fill="white">
+    Join the Waitlist
   </text>
 
-  <!-- pipbot.co -->
-  <text x="600" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#007AFF" text-anchor="middle">
+  <!-- Bottom branding -->
+  <text x="600" y="580" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" text-anchor="middle" fill="#525252">
     pipbot.co
   </text>
 </svg>
