@@ -18,8 +18,8 @@ export function PipAvatar({ size = 'lg' }: { size?: 'sm' | 'md' | 'lg' }) {
         {/* Outer glow */}
         <defs>
           <radialGradient id="pipGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+            <stop offset="0%" stopColor="#007AFF" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#007AFF" stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -44,7 +44,7 @@ export function PipAvatar({ size = 'lg' }: { size?: 'sm' | 'md' | 'lg' }) {
           cx="32"
           cy="44"
           r="5"
-          fill="#6366f1"
+          fill="#007AFF"
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
         />
@@ -52,7 +52,7 @@ export function PipAvatar({ size = 'lg' }: { size?: 'sm' | 'md' | 'lg' }) {
           cx="50"
           cy="44"
           r="5"
-          fill="#6366f1"
+          fill="#007AFF"
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
         />
@@ -60,7 +60,7 @@ export function PipAvatar({ size = 'lg' }: { size?: 'sm' | 'md' | 'lg' }) {
           cx="68"
           cy="44"
           r="5"
-          fill="#6366f1"
+          fill="#007AFF"
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}
         />

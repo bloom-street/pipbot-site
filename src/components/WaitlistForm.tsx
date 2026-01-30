@@ -51,10 +51,10 @@ export function WaitlistForm({ showWaitlistCount = true, compact = false }: Wait
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className={`text-center ${compact ? 'p-4' : 'p-6'} rounded-2xl bg-emerald-500/10 border border-emerald-500/30`}
+            className={`text-center ${compact ? 'p-4' : 'p-6'} rounded-2xl bg-blue-500/10 border border-blue-500/30`}
           >
-            <div className="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center mx-auto mb-4">
-              <Check className="w-7 h-7 text-emerald-500" />
+            <div className="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
+              <Check className="w-7 h-7 text-blue-500" />
             </div>
             <p className="text-foreground font-semibold text-lg mb-1">You're on the list!</p>
             <p className="text-muted-foreground text-sm">Check your email for confirmation.</p>
@@ -83,7 +83,7 @@ export function WaitlistForm({ showWaitlistCount = true, compact = false }: Wait
                   flex-1 px-5 py-3.5 rounded-xl
                   bg-card/80 backdrop-blur-sm border border-border
                   text-foreground placeholder:text-muted-foreground
-                  focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20
+                  focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20
                   transition-all duration-200
                   outline-none input-glow
                   disabled:opacity-50
@@ -95,12 +95,12 @@ export function WaitlistForm({ showWaitlistCount = true, compact = false }: Wait
                 className="
                   btn-shine
                   px-8 py-3.5 rounded-xl
-                  bg-emerald-500 text-white font-semibold
-                  hover:bg-emerald-400
+                  bg-blue-500 text-white font-semibold
+                  hover:bg-blue-400
                   active:scale-[0.98]
                   disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100
                   transition-all duration-200
-                  shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40
+                  shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40
                   flex items-center justify-center gap-2
                   whitespace-nowrap
                 "
@@ -131,7 +131,7 @@ export function WaitlistForm({ showWaitlistCount = true, compact = false }: Wait
             
             {showWaitlistCount && waitlistCount > 0 && (
               <p className="text-muted-foreground text-sm text-center">
-                Join <span className="text-emerald-400 font-medium">{waitlistCount.toLocaleString()}</span> others on the waitlist
+                Join <span className="text-blue-400 font-medium">{waitlistCount.toLocaleString()}</span> others on the waitlist
               </p>
             )}
           </motion.form>

@@ -48,10 +48,10 @@ module.exports = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        emerald: {
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
+        imessage: {
+          400: '#34AAFF',
+          500: '#007AFF',
+          600: '#0055CC',
         },
       },
       borderRadius: {
@@ -63,7 +63,7 @@ module.exports = {
       },
       boxShadow: {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        'emerald': '0 10px 40px -10px rgba(16, 185, 129, 0.3)',
+        'imessage': '0 10px 40px -10px rgba(0, 122, 255, 0.3)',
       },
       keyframes: {
         "accordion-down": {

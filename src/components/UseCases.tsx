@@ -25,7 +25,7 @@ const categories = [
     id: 'work',
     label: 'Work & Business',
     icon: Briefcase,
-    color: 'from-emerald-500 to-teal-500',
+    color: 'from-blue-500 to-teal-500',
     items: [
       { icon: MessageSquare, text: 'Research meeting participants and generate briefing docs before calls' },
       { icon: FileText, text: 'Summarize overlooked messages and email backlogs' },
@@ -121,12 +121,12 @@ export function UseCases() {
                 font-medium text-sm
                 transition-all duration-300
                 ${activeCategory === cat.id 
-                  ? 'bg-card border border-emerald-500/50 text-foreground shadow-lg shadow-emerald-500/10' 
+                  ? 'bg-card border border-blue-500/50 text-foreground shadow-lg shadow-blue-500/10' 
                   : 'bg-transparent border border-transparent text-muted-foreground hover:text-foreground hover:bg-card/50'
                 }
               `}
             >
-              <cat.icon className={`w-4 h-4 ${activeCategory === cat.id ? 'text-emerald-500' : ''}`} />
+              <cat.icon className={`w-4 h-4 ${activeCategory === cat.id ? 'text-blue-500' : ''}`} />
               {cat.label}
             </button>
           ))}
@@ -149,12 +149,12 @@ export function UseCases() {
                   font-medium text-sm whitespace-nowrap
                   transition-all duration-300
                   ${activeCategory === cat.id 
-                    ? 'bg-card border border-emerald-500/50 text-foreground' 
+                    ? 'bg-card border border-blue-500/50 text-foreground' 
                     : 'bg-card/50 border border-border text-muted-foreground'
                   }
                 `}
               >
-                <cat.icon className={`w-4 h-4 ${activeCategory === cat.id ? 'text-emerald-500' : ''}`} />
+                <cat.icon className={`w-4 h-4 ${activeCategory === cat.id ? 'text-blue-500' : ''}`} />
                 {cat.label}
               </button>
             ))}

@@ -12,19 +12,19 @@
     --card-foreground: 0 0% 96%;
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 96%;
-    --primary: 160 84% 39%;
+    --primary: 211 100% 50%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 96%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 45%;
-    --accent: 160 84% 39%;
+    --accent: 211 100% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 160 84% 39%;
+    --ring: 211 100% 50%;
     --radius: 0.75rem;
   }
 }
@@ -63,7 +63,7 @@
 
 /* Selection */
 ::selection {
-  background: rgba(16, 185, 129, 0.3);
+  background: rgba(0, 122, 255, 0.3);
   color: hsl(var(--foreground));
 }
 
@@ -93,7 +93,7 @@
 .orb-1 {
   width: 600px;
   height: 600px;
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #007AFF, #0055CC);
   top: -200px;
   left: -100px;
   animation-delay: 0s;
@@ -102,7 +102,7 @@
 .orb-2 {
   width: 500px;
   height: 500px;
-  background: linear-gradient(135deg, #059669, #047857);
+  background: linear-gradient(135deg, #0055CC, #003D99);
   top: 40%;
   right: -150px;
   animation-delay: -7s;
@@ -111,7 +111,7 @@
 .orb-3 {
   width: 400px;
   height: 400px;
-  background: linear-gradient(135deg, #34d399, #10b981);
+  background: linear-gradient(135deg, #34AAFF, #007AFF);
   bottom: 10%;
   left: 20%;
   animation-delay: -14s;
@@ -138,9 +138,9 @@
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  background-image: 
-    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(0, 122, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 122, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -159,8 +159,8 @@
 }
 
 /* Glow effect */
-.glow-emerald {
-  box-shadow: 0 0 60px rgba(16, 185, 129, 0.3);
+.glow-blue {
+  box-shadow: 0 0 60px rgba(0, 122, 255, 0.3);
 }
 
 /* Card hover */
@@ -177,13 +177,13 @@
   transition: all 0.3s ease;
 }
 .use-case-card:hover {
-  border-color: rgba(16, 185, 129, 0.4);
-  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(0, 122, 255, 0.4);
+  background: rgba(0, 122, 255, 0.05);
 }
 
 /* Step number */
 .step-number {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #007AFF, #0055CC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -191,7 +191,7 @@
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
+  background: linear-gradient(135deg, #007AFF 0%, #34AAFF 50%, #7AC4FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -255,7 +255,7 @@
 
 /* Input focus glow */
 .input-glow:focus {
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
 }
 
 /* Loading spinner */

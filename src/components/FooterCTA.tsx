@@ -9,7 +9,7 @@ export function FooterCTA() {
   return (
     <section ref={ref} className="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent pointer-events-none" />
       
       <div className="max-w-2xl mx-auto text-center relative z-10">
         <motion.div

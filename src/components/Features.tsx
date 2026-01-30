@@ -57,18 +57,18 @@ export function Features() {
               "
             >
               {/* Glow on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
                 {/* Icon */}
                 <div className="
                   w-14 h-14 rounded-xl 
-                  bg-emerald-500/10 border border-emerald-500/20
+                  bg-blue-500/10 border border-blue-500/20
                   flex items-center justify-center mb-6
-                  group-hover:bg-emerald-500/20 group-hover:border-emerald-500/30
+                  group-hover:bg-blue-500/20 group-hover:border-blue-500/30
                   transition-all duration-300
                 ">
-                  <feature.icon className="w-7 h-7 text-emerald-500" />
+                  <feature.icon className="w-7 h-7 text-blue-500" />
                 </div>
                 
                 {/* Title */}

@@ -23,7 +23,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-border mb-6"
         >
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
           <span className="text-sm text-muted-foreground">Coming soon to Mac</span>
         </motion.div>
         
@@ -84,7 +84,7 @@ export function Hero() {
           transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
           className="w-6 h-10 rounded-full border-2 border-border flex items-start justify-center p-2"
         >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <motion.div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
         </motion.div>
       </motion.div>
     </section>

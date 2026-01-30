@@ -57,7 +57,7 @@ export function HowItWorks() {
             >
               {/* Connector line - desktop only */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-px bg-gradient-to-r from-emerald-500/50 to-transparent" />
+                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-px bg-gradient-to-r from-blue-500/50 to-transparent" />
               )}
 
               {/* Step Number */}
@@ -68,10 +68,10 @@ export function HowItWorks() {
               {/* Icon */}
               <div className="
                 w-16 h-16 rounded-2xl mx-auto mb-5
-                bg-emerald-500/10 border border-emerald-500/20
+                bg-blue-500/10 border border-blue-500/20
                 flex items-center justify-center
               ">
-                <step.icon className="w-8 h-8 text-emerald-500" />
+                <step.icon className="w-8 h-8 text-blue-500" />
               </div>
 
               {/* Title */}

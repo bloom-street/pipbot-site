@@ -6,8 +6,8 @@ export function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-            <Sparkles className="w-4 h-4 text-emerald-500" />
+          <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+            <Sparkles className="w-4 h-4 text-blue-500" />
           </div>
           <span className="text-foreground font-semibold">PipBot</span>
         </div>
