@@ -2,11 +2,7 @@
   <defs>
     <linearGradient id="bg" x1="50%" y1="0%" x2="50%" y2="100%">
       <stop offset="0%" stop-color="#0a0a0a" />
-      <stop offset="100%" stop-color="#0f1f1a" />
-    </linearGradient>
-    <linearGradient id="pipBody" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" />
-      <stop offset="100%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#0a1628" />
     </linearGradient>
   </defs>
 
@@ -15,58 +11,47 @@
 
   <!-- Grid pattern -->
   <g opacity="0.06">
-    <line x1="100" y1="0" x2="100" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="200" y1="0" x2="200" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="300" y1="0" x2="300" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="400" y1="0" x2="400" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="500" y1="0" x2="500" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="600" y1="0" x2="600" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="700" y1="0" x2="700" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="800" y1="0" x2="800" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="900" y1="0" x2="900" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="1100" y1="0" x2="1100" y2="630" stroke="#10b981" stroke-width="1" />
-    <line x1="0" y1="100" x2="1200" y2="100" stroke="#10b981" stroke-width="1" />
-    <line x1="0" y1="200" x2="1200" y2="200" stroke="#10b981" stroke-width="1" />
-    <line x1="0" y1="300" x2="1200" y2="300" stroke="#10b981" stroke-width="1" />
-    <line x1="0" y1="400" x2="1200" y2="400" stroke="#10b981" stroke-width="1" />
-    <line x1="0" y1="500" x2="1200" y2="500" stroke="#10b981" stroke-width="1" />
+    <line x1="100" y1="0" x2="100" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="200" y1="0" x2="200" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="400" y1="0" x2="400" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="500" y1="0" x2="500" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="700" y1="0" x2="700" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="800" y1="0" x2="800" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="1100" y1="0" x2="1100" y2="630" stroke="#007AFF" stroke-width="1" />
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#007AFF" stroke-width="1" />
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#007AFF" stroke-width="1" />
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#007AFF" stroke-width="1" />
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#007AFF" stroke-width="1" />
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#007AFF" stroke-width="1" />
   </g>
 
-  <!-- Pip character (centered, smaller) -->
-  <g transform="translate(550, 80)">
+  <!-- Speech bubble character (centered) -->
+  <g transform="translate(550, 70)">
+    <!-- Speech bubble body -->
     <path
-      d="M50 10
-         C70 10, 85 25, 85 45
-         C85 55, 90 60, 88 70
-         C85 85, 70 92, 50 92
-         C30 92, 15 85, 12 70
-         C10 60, 15 55, 15 45
-         C15 25, 30 10, 50 10Z"
-      fill="url(#pipBody)"
+      d="M50 8
+         C75 8, 92 24, 92 44
+         C92 64, 75 80, 50 80
+         C43 80, 36 78, 30 75
+         L14 88
+         L20 72
+         C12 65, 8 55, 8 44
+         C8 24, 25 8, 50 8Z"
+      fill="white"
     />
-    <!-- Eyes -->
-    <ellipse cx="35" cy="45" rx="6" ry="8" fill="#0a0a0a" />
-    <ellipse cx="65" cy="45" rx="6" ry="8" fill="#0a0a0a" />
-    <!-- Eye highlights -->
-    <circle cx="37" cy="42" r="2.5" fill="white" opacity="0.8" />
-    <circle cx="67" cy="42" r="2.5" fill="white" opacity="0.8" />
-    <!-- Smile -->
-    <path
-      d="M38 65 Q50 75, 62 65"
-      stroke="#0a0a0a"
-      stroke-width="3"
-      stroke-linecap="round"
-      fill="none"
-    />
-    <!-- Cheeks -->
-    <circle cx="25" cy="58" r="5" fill="#10b981" opacity="0.3" />
-    <circle cx="75" cy="58" r="5" fill="#10b981" opacity="0.3" />
+    <!-- Three dots -->
+    <circle cx="30" cy="44" r="7" fill="#007AFF" />
+    <circle cx="50" cy="44" r="7" fill="#007AFF" />
+    <circle cx="70" cy="44" r="7" fill="#007AFF" />
   </g>
 
   <!-- Meet Pip title -->
   <text x="600" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" text-anchor="middle">
-    <tspan fill="white">Meet </tspan><tspan fill="#10b981">Pip</tspan>
+    <tspan fill="white">Meet </tspan><tspan fill="#007AFF">Pip</tspan>
   </text>
 
   <!-- Subtitle -->
@@ -83,7 +68,7 @@
   </text>
 
   <!-- pipbot.co -->
-  <text x="600" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#10b981" text-anchor="middle">
+  <text x="600" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#007AFF" text-anchor="middle">
     pipbot.co
   </text>
 </svg>
